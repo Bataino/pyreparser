@@ -3,8 +3,8 @@ from flask import Flask, jsonify, request
 import json
 from pyresparser import ResumeParser
 
-app = Flask(__name__)
-@app.route('/')
+application = Flask(__name__)
+@application.route('/')
 
 def index():
     resume = request.args.get('resume')
@@ -19,5 +19,5 @@ def index():
     
     print(data)
     return jsonify(data)
-app.run()
+application.run()
 # 66586986647
